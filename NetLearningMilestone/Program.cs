@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NetLearningMilestone
 {
@@ -10,9 +7,21 @@ namespace NetLearningMilestone
     {
         static void Main(string[] args)
         {
-            while (true)
+            var fibonaccy = new List<int>() { 1, 1 };
+
+            while (fibonaccy.Count < 20)
             {
-                Console.WriteLine("string!");
+                var previous = fibonaccy.Count - 1;
+                var previous2 = fibonaccy.Count - 2;
+
+                fibonaccy.Add(previous + previous2);
+
+            }
+
+
+            foreach (int item in fibonaccy)
+            {
+                Console.WriteLine(item);
             }
         }
     }
