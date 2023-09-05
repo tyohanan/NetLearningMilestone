@@ -9,13 +9,12 @@ namespace NetLearningMilestone
         {
             var fibonaccy = new List<int>() { 1, 1 };
 
-            while (fibonaccy.Count < 20)
+            while (fibonaccy[fibonaccy.Count - 1] != 6765)
             {
-                var previous = fibonaccy.Count - 1;
-                var previous2 = fibonaccy.Count - 2;
+                var previous = fibonaccy[fibonaccy.Count - 1];
+                var previous2 = fibonaccy[fibonaccy.Count - 2];
 
                 fibonaccy.Add(previous + previous2);
-
             }
 
 
